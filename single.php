@@ -111,11 +111,12 @@
         <section class="masonary-blog-section ptb-120">
             <div class="container">
                 <div class="row">
+                    <div class="col-8">
                     <?php 
                         while(have_posts()){
                             the_post();
                     ?>
-                    <div class="col-lg-10 col-md-10 offset-lg-1">
+                    <div class="col-lg-12 col-md-12">
                         <div class="single-article p-5 mb-4 mb-lg-4" <?php post_class(); ?>>
                             <a class="img-article" href="#">
                                 <?php
@@ -155,6 +156,15 @@
                         </div>
                     </div>
                     <?php } ?>
+                    </div>
+                    <div class="col-4">
+                        <?php 
+                            if(is_active_sidebar('sidebar_1')){
+                               dynamic_sidebar('sidebar_1');
+                            }
+                        
+                        ?>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-12">

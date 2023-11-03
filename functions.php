@@ -42,3 +42,21 @@ function protheme_enqueue_css_js(){
 }
 
 add_action("wp_enqueue_scripts", "protheme_enqueue_css_js");
+
+
+
+/**
+ * register widgets 
+ * */ 
+function ads_widgets_register(){
+    register_sidebar([
+        'name'  => "Single Sidebar One",
+        'id'    => 'sidebar_1',
+        'widget_before' => "<div class='widgets'>",
+        'widget_after'  => '</div>',
+        'after_title'  => '<h2>',
+        'before_title' => '</h2>'
+    ]);
+}
+
+add_action('widgets_init', 'ads_widgets_register');
