@@ -102,7 +102,7 @@
         <!-- header part end -->
 
         <?php
-            get_template_part('hero.php');
+            get_template_part('hero');
         ?>
 
         <!-- blog section start -->
