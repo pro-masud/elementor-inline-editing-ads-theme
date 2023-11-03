@@ -50,13 +50,39 @@ add_action("wp_enqueue_scripts", "protheme_enqueue_css_js");
  * */ 
 function ads_widgets_register(){
     register_sidebar([
-        'name'  => "Single Sidebar One",
-        'id'    => 'sidebar_1',
-        'widget_before' => "<div class='widgets'>",
-        'widget_after'  => '</div>',
-        'after_title'  => '<h2>',
-        'before_title' => '</h2>'
+        'name'              => __('Single Sidebar One', 'mistri'),
+        'id'                => 'sidebar_1',
+        'description'       =>  __('Sidebar One', 'mistri'),
+        'widget_before'     => "<div class='widgets'>",
+        'widget_after'      => '</div>',
+        'after_title'       => '<h2>',
+        'before_title'      => '</h2>'
     ]);
 }
 
 add_action('widgets_init', 'ads_widgets_register');
+
+
+/**
+ * post password protected filtering
+ * */ 
+
+ function ads_post_password_protected($content){
+    if(!post_password_required()){
+        return $content;
+    }else{
+        echo "This Post Password Protected Here, Please Your Password Put Here Now";
+    }
+ }
+
+ add_filter('the_excerpt', 'ads_post_password_protected');
+
+
+/**
+ * password protected title filering here now
+ * */  
+function ads_post_title_protected_cheange(){
+    return "%s";
+}
+
+add_filter('protected_title_format','ads_post_title_protected_cheange');

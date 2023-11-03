@@ -131,7 +131,11 @@
                                 <a href="<?php esc_attr(the_permalink(), 'freethemeads'); ?>">
                                     <h2 class="limit-2-line-text"><?php esc_html(the_title(), 'freethemeads'); ?></h2>
                                 </a>
-                                <p class="limit-2-line-text"><?php echo esc_html( wp_trim_words(get_the_content(), '30', null), 'freethemeads'); ?></p>
+                                <?php
+                                   the_excerpt();
+                                
+                                ?>
+                                
                                 
                                 <a href="#">
                                     <div class="avatar-container pt-4">
