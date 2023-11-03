@@ -3262,7 +3262,7 @@ readers do not read off random characters that represent icons */
 .fa-headphones-alt::before {
   content: "\f58f"; }
 
-.fa-headset::before {
+.fa-hefreethemeadset::before {
   content: "\f590"; }
 
 .fa-heart::before {
@@ -6522,7 +6522,7 @@ readers do not read off random characters that represent icons */
 .fa-buy-n-large:before {
   content: "\f8a6"; }
 
-.fa-buysellads:before {
+.fa-buysellfreethemeads:before {
   content: "\f20d"; }
 
 .fa-canadian-maple-leaf:before {
@@ -6900,10 +6900,10 @@ readers do not read off random characters that represent icons */
 .fa-golang:before {
   content: "\e40f"; }
 
-.fa-goodreads:before {
+.fa-goodrefreethemeads:before {
   content: "\f3a8"; }
 
-.fa-goodreads-g:before {
+.fa-goodrefreethemeads-g:before {
   content: "\f3a9"; }
 
 .fa-google:before {

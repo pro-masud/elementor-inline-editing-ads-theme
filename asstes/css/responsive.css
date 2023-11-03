@@ -29,7 +29,7 @@
     }
 
 
-    /* ADS integration section */
+    /* freethemeads integration section */
     .integration-list-wrap {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
@@ -37,7 +37,7 @@
         flex-direction: row;
     }
 
-     /* ADS integration a */
+     /* freethemeads integration a */
      .integration-list-wrap a {
         position: inherit;
         width: 45px;

@@ -97,10 +97,3 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     margin-right: auto;
     /* Add more styles as needed */
 }
-
-/* style.css */
-
-@import url('https://example.com/external-style.css');
-
-/* Your theme's styles go here */
-

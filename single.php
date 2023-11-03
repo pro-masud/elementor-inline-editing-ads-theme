@@ -101,9 +101,21 @@
         </header>
         <!-- header part end -->
 
-        <?php
-            get_template_part('hero.php');
-        ?>
+
+        <!-- page header section start -->
+        <section class="page-header position-relative overflow-hidden ptb-120 bg-dark" style="background: url('./images/page-header-bg.svg') no-repeat bottom left;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <h1 class="display-5 fw-bold">Latest From Our Blog </h1>
+                        <p class="lead">Thoughts, ideas, tips and news fresh from our innovation lab  </p>
+                    </div>
+                </div>
+                <div class="bg-circle rounded-circle"></div>
+            </div>
+        </section>
+        <!-- page header section end -->
+
 
         <!-- blog section start -->
         <section class="masonary-blog-section ptb-120">
@@ -113,8 +125,8 @@
                         while(have_posts()){
                             the_post();
                     ?>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-article mb-4 mb-lg-4" <?php post_class(); ?>>
+                    <div class="col-lg-10 col-md-10 offset-lg-1">
+                        <div class="single-article p-5 mb-4 mb-lg-4" <?php post_class(); ?>>
                             <a class="img-article" href="#">
                                 <?php
                                     if(has_post_thumbnail()){
@@ -124,14 +136,15 @@
                                     }
                                 ?>
                             </a>
-                            <div class="article-content p-4">
+                            <div class="article-content p-10">
                                 <div class="article-category mb-4 d-block">
                                     <?php echo get_the_tag_list('<ul><li class="d-inline-block mx-1 text-dark badge bg-primary-soft">', '</li><li class="d-inline-block mx-1 text-dark badge bg-primary-soft">', '<li></ul>');?>
                                 </div>
                                 <a href="<?php esc_attr(the_permalink(), 'freethemeads'); ?>">
                                     <h2 class="limit-2-line-text"><?php esc_html(the_title(), 'freethemeads'); ?></h2>
                                 </a>
-                                <p class="limit-2-line-text"><?php echo esc_html( wp_trim_words(get_the_content(), '30', null), 'freethemeads'); ?></p>
+
+                                <p class="limit-2-line-text"><?php echo esc_html( the_content(), 'freethemeads'); ?></p>
                                 
                                 <a href="#">
                                     <div class="avatar-container pt-4">
@@ -150,20 +163,17 @@
                     <?php } ?>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 col-lg-6">
+                    <div class="col-12">
                         <?php 
-                             the_posts_pagination( array(
-                                'title'              => '', // this should hide the title
-                                'prev_text'          => __( 'Previous', 'twentyfifteen' ),
-                                'next_text'          => __( 'Next', 'twentyfifteen' ),
-                                'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( '', 'nieuwedruk' ) . ' </span>',
-                            ) );
-                        
-                        ?>
+                        if(comments_open()){
+                            comments_template();
+                        } ?>
                     </div>
                 </div>
             </div>
         </section>
         <!-- blog section end -->
+
+
 
 <?php get_footer(); ?>

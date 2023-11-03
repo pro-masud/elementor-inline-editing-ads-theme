@@ -4,7 +4,7 @@
  * after setup theme
  * */ 
 function protheme_after_setup_theme(){
-    load_theme_textdomain('ads');
+    load_theme_textdomain('freethemeads');
     
     // add theme supports post thumbnails
     add_theme_support("post-thumbnails");
@@ -21,15 +21,15 @@ add_action('after_setup_theme', 'protheme_after_setup_theme');
  * */ 
 function protheme_enqueue_css_js(){
  
-    wp_enqueue_style('all-fonts-awesome', get_template_directory_uri() . "/asstes/css/all.css", [], time(), "all");
-    wp_enqueue_style('bootstrap', get_template_directory_uri() . "/asstes/css/bootstrap.min.css", [], time(), "all");
-    wp_enqueue_style('aos', get_template_directory_uri() . "/asstes/css/aos.css", [], time(), "all");
-    wp_enqueue_style('magnific-popup', get_template_directory_uri() . "/asstes/css/magnific-popup.css", [], time(), "all");
-    wp_enqueue_style('carousel', get_template_directory_uri() . "/asstes/css/owl.carousel.css", [], time(), "all");
-    wp_enqueue_style('theme.default', get_template_directory_uri() . "/asstes/css/owl.theme.default.min.css", [], time(), "all");
-    wp_enqueue_style('template-main', get_template_directory_uri() . "/asstes/css/style.css", [], time(), "all");
-    wp_enqueue_style('template-main-responsive', get_template_directory_uri() . "/asstes/css/responsive.css", [], time(), "all");
-    wp_enqueue_style('theme-main', get_stylesheet_uri(), [], time(), "all");
+    wp_enqueue_style('all-fonts-awesome', get_template_directory_uri() . "/asstes/css/all.css", [], time(), null);
+    wp_enqueue_style('bootstrap', get_template_directory_uri() . "/asstes/css/bootstrap.min.css", [], time(), null);
+    wp_enqueue_style('aos', get_template_directory_uri() . "/asstes/css/aos.css", [], time(), null);
+    wp_enqueue_style('magnific-popup', get_template_directory_uri() . "/asstes/css/magnific-popup.css", [], time(), null);
+    wp_enqueue_style('carousel', get_template_directory_uri() . "/asstes/css/owl.carousel.css", [], time(), null);
+    wp_enqueue_style('theme.default', get_template_directory_uri() . "/asstes/css/owl.theme.default.min.css", [], time(), null);
+    wp_enqueue_style('template-main', get_template_directory_uri() . "/asstes/css/style.css", [], time(), null);
+    wp_enqueue_style('template-main-responsive', get_template_directory_uri() . "/asstes/css/responsive.css", [], time(), null);
+    wp_enqueue_style('theme-main', get_stylesheet_uri(), ['template-main-responsive'], time(), null);
 
 
     wp_enqueue_script('jquery', get_template_directory_uri() . "/asstes/js/jquery.min.js", array(), time(), true );
