@@ -16,12 +16,18 @@ function protheme_after_setup_theme(){
 
     add_theme_support( 'automatic-feed-links' );
 
+    // wordpress custom background
     add_theme_support("custom-background");
+
+    // wordpress default post-formates
+    add_theme_support("post-formats", ['aside', 'audio', 'chat', 'gallery', 'imag', 'link', 'quote', 'status', 'video']);
     // register nav menus header and footer
     register_nav_menus([
         'main-menu' => __("Header Menu", "freethemeads"),
         'footer-menu' => __("Footer Menu", "freethemeads"),
     ]);
+
+    
 }
 
 add_action('after_setup_theme', 'protheme_after_setup_theme');
@@ -41,6 +47,7 @@ function protheme_enqueue_css_js(){
     wp_enqueue_style('template-main', get_template_directory_uri() . "/asstes/css/style.css", [], time(), null);
     wp_enqueue_style('template-main-responsive', get_template_directory_uri() . "/asstes/css/responsive.css", [], time(), null);
     wp_enqueue_style('theme-main', get_stylesheet_uri(), ['template-main-responsive'], time(), null);
+    wp_enqueue_style("dashicons");
 
 
     wp_enqueue_script('jquery', get_template_directory_uri() . "/asstes/js/jquery.min.js", array(), time(), true );

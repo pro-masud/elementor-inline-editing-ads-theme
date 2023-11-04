@@ -27,6 +27,28 @@
                             <div class="article-content p-4">
                                 <div class="article-category mb-4 d-block">
                                     <?php echo get_the_tag_list('<ul><li class="d-inline-block mx-1 text-dark badge bg-primary-soft">', '</li><li class="d-inline-block mx-1 text-dark badge bg-primary-soft">', '<li></ul>');?>
+                                    <?php 
+                                        $post_formats = get_post_format();
+                                        if($post_formats == 'aside'){
+                                            echo '<span class="dashicons dashicons-format-aside"></span>';
+                                        }else if($post_formats == 'audio'){
+                                            echo '<span class="dashicons dashicons-format-audio"></span>';
+                                        }else if($post_formats == 'chat'){
+                                            echo '<span class="dashicons dashicons-format-chat"></span>';
+                                        }else if($post_formats == 'gallery'){
+                                            echo '<span class="dashicons dashicons-format-gallery"></span>';
+                                        }else if($post_formats == 'image'){
+                                            echo '<span class="dashicons dashicons-format-image"></span>';
+                                        }else if($post_formats == 'quote'){
+                                            echo '<span class="dashicons dashicons-format-quote"></span>';
+                                        }else if($post_formats == 'link'){
+                                            echo '<span class="dashicons dashicons-format-link"></span>';
+                                        }else if($post_formats == 'status'){
+                                            echo '<span class="dashicons dashicons-format-status"></span>';
+                                        }else if($post_formats == 'video'){
+                                            echo '<span class="dashicons dashicons-format-video"></span>';
+                                        }
+                                    ?>
                                 </div>
                                 <a href="<?php esc_attr(the_permalink(), 'freethemeads'); ?>">
                                     <h2 class="limit-2-line-text"><?php esc_html(the_title(), 'freethemeads'); ?></h2>
