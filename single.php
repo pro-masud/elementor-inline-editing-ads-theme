@@ -35,6 +35,7 @@
                                 </a>
 
                                 <p class="limit-2-line-text"><?php echo esc_html( the_content(), 'freethemeads'); ?></p>
+                                <?php wp_link_pages(); ?>
                                 
                                 <a href="#">
                                     <div class="avatar-container pt-4">
