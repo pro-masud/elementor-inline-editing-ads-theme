@@ -88,8 +88,6 @@
             
         </footer>
         <!-- footer section end -->
-    </div>
-    <!-- main div end -->
     
     <?php wp_footer(); ?>
 </body>

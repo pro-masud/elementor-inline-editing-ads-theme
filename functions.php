@@ -11,6 +11,17 @@ function protheme_after_setup_theme(){
 
     // add theme supports title-tag
     add_theme_support('title-tag');
+
+    add_theme_support("custom-header");
+
+    add_theme_support( 'automatic-feed-links' );
+
+    add_theme_support("custom-background");
+    // register nav menus header and footer
+    register_nav_menus([
+        'main-menu' => __("Header Menu", "mistri"),
+        'footer-menu' => __("Footer Menu", "mistri"),
+    ]);
 }
 
 add_action('after_setup_theme', 'protheme_after_setup_theme');
@@ -55,8 +66,8 @@ function ads_widgets_register(){
         'description'       =>  __('Sidebar One', 'mistri'),
         'widget_before'     => "<div class='widgets'>",
         'widget_after'      => '</div>',
-        'after_title'       => '<h2>',
-        'before_title'      => '</h2>'
+        'before_title'      => '<h2>',
+        'after_title'       => '</h2>',
     ]);
 }
 
@@ -86,3 +97,15 @@ function ads_post_title_protected_cheange(){
 }
 
 add_filter('protected_title_format','ads_post_title_protected_cheange');
+
+
+/**
+ * header main menu css class adding
+ * */ 
+
+function ads_header_css_class_adding($classcs, $items){
+    $classcs[] = "nav-link";
+    return $classcs;    
+}
+
+add_filter('nav_menu_css_class', 'ads_header_css_class_adding', 10, 2);
