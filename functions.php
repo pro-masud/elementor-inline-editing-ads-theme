@@ -21,6 +21,7 @@ function protheme_after_setup_theme(){
 
     // wordpress default post-formates
     add_theme_support("post-formats", ['aside', 'audio', 'chat', 'gallery', 'imag', 'link', 'quote', 'status', 'video']);
+    
     // register nav menus header and footer
     register_nav_menus([
         'main-menu' => __("Header Menu", "freethemeads"),
