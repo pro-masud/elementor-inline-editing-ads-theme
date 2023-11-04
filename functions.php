@@ -19,8 +19,8 @@ function protheme_after_setup_theme(){
     add_theme_support("custom-background");
     // register nav menus header and footer
     register_nav_menus([
-        'main-menu' => __("Header Menu", "mistri"),
-        'footer-menu' => __("Footer Menu", "mistri"),
+        'main-menu' => __("Header Menu", "freethemeads"),
+        'footer-menu' => __("Footer Menu", "freethemeads"),
     ]);
 }
 
@@ -61,9 +61,9 @@ add_action("wp_enqueue_scripts", "protheme_enqueue_css_js");
  * */ 
 function ads_widgets_register(){
     register_sidebar([
-        'name'              => __('Single Sidebar One', 'mistri'),
+        'name'              => __('Single Sidebar One', 'freethemeads'),
         'id'                => 'sidebar_1',
-        'description'       =>  __('Sidebar One', 'mistri'),
+        'description'       =>  __('Sidebar One', 'freethemeads'),
         'widget_before'     => "<div class='widgets'>",
         'widget_after'      => '</div>',
         'before_title'      => '<h2>',

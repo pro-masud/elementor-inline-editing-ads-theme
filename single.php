@@ -51,8 +51,8 @@
                             </div>
                         </div>
                         <div class="single_next_prev_post" style="display: flex; justify-content: space-around;">
-                            <span style="text-align: left;"><?php previous_post_link('%link', '<i class="fa-solid fa-arrow-left"></i> Previous Post Link', 'mistri'); ?></span>
-                            <span style="text-align: right;"><?php next_post_link('%link', 'Next Post Link <i class="fa-solid fa-arrow-right"></i>', 'mistri'); ?></span>
+                            <span style="text-align: left;"><?php previous_post_link('%link', '<i class="fa-solid fa-arrow-left"></i> Previous Post Link', 'freethemeads'); ?></span>
+                            <span style="text-align: right;"><?php next_post_link('%link', 'Next Post Link <i class="fa-solid fa-arrow-right"></i>', 'freethemeads'); ?></span>
                         </div>
                     </div>
                     <?php } ?>

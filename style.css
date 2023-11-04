@@ -1,5 +1,5 @@
 /*!
-Theme Name: freefreethemeads
+Theme Name: Free Theme Ads
 Theme URI: http://underscores.me/
 Author: freethemeads
 Author URI: http://freethemeads
@@ -9,7 +9,7 @@ Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
 License URI: LICENSE
-Text Domain: freefreethemeads
+Text Domain: freethemeads
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
@@ -99,8 +99,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 /* style.css */
-
-@import url('https://example.com/external-style.css');
 
 /* Your theme's styles go here */
 
