@@ -40,10 +40,19 @@
                                 <a href="#">
                                     <div class="avatar-container pt-4">
                                         <div class="avatar-img">
-                                            <img src="<?php echo get_template_directory_uri() ; ?>/asstes/images/avatar/arif.jpg" alt="avatar">
+                                            <?php 
+                                                // author information
+                                                $authorImage = wp_get_current_user();
+                                                if($authorImage){
+                                                ?>
+
+                                                 <img src="<?php echo get_avatar_url( $authorImage -> ID ); ?>" alt="avatar"> 
+                                                 <?php 
+                                                }
+                                            ?>
                                         </div>
                                         <div class="avatar-info">
-                                            <h6 class="mb-0 avatar-name"><?php esc_html(the_author(), 'freethemeads'); ?></h6>
+                                            <h6 class="mb-0 avatar-name"><?php echo esc_html(get_the_author_meta('display_name'), 'freethemeads'); ?></h6>
                                             <span class="small fw-medium text-meuted"><?php echo esc_html(get_the_date(), 'freethemeads'); ?></span>
                                         </div>
                                     </div>

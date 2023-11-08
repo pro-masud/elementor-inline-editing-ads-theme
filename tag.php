@@ -9,10 +9,18 @@
         <section class="masonary-blog-section ptb-120">
             <div class="container">
                 <div class="row">
+                    
+                
+               <h1> This is a Current Tag Name:<?php single_tag_title(); ?></h1>
+                </div>
+                <div class="row">
                     <?php 
                         while(have_posts()){
                             the_post();
-                            get_template_part("/post-formats/content", get_post_format());
+
+                           ?>
+                           <h2><a href="<?php the_permalink(); ?>"> <?php the_title(); ?></a></h2>
+                           <?php 
                         } 
                     ?>
                 </div>
