@@ -52,7 +52,7 @@
                                             ?>
                                         </div>
                                         <div class="avatar-info">
-                                            <h6 class="mb-0 avatar-name"><?php echo esc_html(get_the_author_meta('display_name'), 'freethemeads'); ?></h6>
+                                            <h6 class="mb-0 avatar-name"><?php echo esc_html(the_author_posts_link(), 'freethemeads'); ?></h6>
                                             <span class="small fw-medium text-meuted"><?php echo esc_html(get_the_date(), 'freethemeads'); ?></span>
                                         </div>
                                     </div>

@@ -13,7 +13,7 @@
                         while(have_posts()){
                             the_post();
                     ?>
-                    <div class="col-lg-4 col-md-6">
+
                         <div  <?php post_class('single-article mb-4 mb-lg-4'); ?>>
                             <a class="img-article" href="#">
                                 <?php
@@ -49,7 +49,6 @@
                                     </div>
                                 </a>
                             </div>
-                        </div>
                     </div>
                     <?php } ?>
                 </div>
