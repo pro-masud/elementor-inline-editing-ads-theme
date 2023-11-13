@@ -16,7 +16,7 @@
                     if(is_month()){
                         $month = esc_html(get_query_var('monthnum'), 'mistri');
                         $dateobj = DateTime::createFromFormat("!m", $month);
-                        echo $dateobj -> format("F");
+                       echo esc_html( $dateobj -> format("F"), 'free-theme-ads');
                     }else if(is_year()){
                         echo esc_html(get_query_var("year"), 'mistri');
                     }else if(is_day()){
@@ -46,9 +46,9 @@
                         <?php 
                              the_posts_pagination( array(
                                 'title'              => '', // this should hide the title
-                                'prev_text'          => __( 'Previous', 'twentyfifteen' ),
-                                'next_text'          => __( 'Next', 'twentyfifteen' ),
-                                'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( '', 'nieuwedruk' ) . ' </span>',
+                                'prev_text'          => __( 'Previous', 'free-theme-ads' ),
+                                'next_text'          => __( 'Next', 'free-theme-ads' ),
+                                'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( '', 'free-theme-ads' ) . ' </span>',
                             ) );
                         
                         ?>

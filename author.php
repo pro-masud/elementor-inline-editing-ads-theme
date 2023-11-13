@@ -20,8 +20,8 @@
                             ?>
                         </div>
                         <div class="avatar-info">
-                            <h6 class="mb-0 avatar-name"><?php echo esc_html(the_author_posts_link(), 'freethemeads'); ?></h6>
-                            <span class="small fw-medium text-meuted"><?php echo esc_html(get_the_date(), 'freethemeads'); ?></span>
+                            <h6 class="mb-0 avatar-name"><?php echo esc_html(the_author_posts_link(), 'free-theme-ads'); ?></h6>
+                            <span class="small fw-medium text-meuted"><?php echo esc_html(get_the_date(), 'free-theme-ads'); ?></span>
                         </div>
                     </div>
                 </a>

@@ -13,8 +13,8 @@
                                 <div class="article-category mb-4 d-block">
                                     <?php echo get_the_tag_list('<ul><li class="d-inline-block mx-1 text-dark badge bg-primary-soft">', '</li><li class="d-inline-block mx-1 text-dark badge bg-primary-soft">', '<li></ul>');?>
                                 </div>
-                                <a href="<?php esc_attr(the_permalink(), 'freethemeads'); ?>">
-                                    <h2 class="limit-2-line-text"><?php esc_html(the_title(), 'freethemeads'); ?></h2>
+                                <a href="<?php esc_attr(the_permalink(), 'free-theme-ads'); ?>">
+                                    <h2 class="limit-2-line-text"><?php esc_html(the_title(), 'free-theme-ads'); ?></h2>
                                 </a>
                                 <?php
                                    the_excerpt();
@@ -28,8 +28,8 @@
                                             <img src="<?php echo get_template_directory_uri() ; ?>/asstes/images/avatar/arif.jpg" alt="avatar">
                                         </div>
                                         <div class="avatar-info">
-                                            <h6 class="mb-0 avatar-name"><?php esc_html(the_author(), 'freethemeads'); ?></h6>
-                                            <span class="small fw-medium text-meuted"><?php echo esc_html(get_the_date(), 'freethemeads'); ?></span>
+                                            <h6 class="mb-0 avatar-name"><?php esc_html(the_author(), 'free-theme-ads'); ?></h6>
+                                            <span class="small fw-medium text-meuted"><?php echo esc_html(get_the_date(), 'free-theme-ads'); ?></span>
                                         </div>
                                     </div>
                                 </a>

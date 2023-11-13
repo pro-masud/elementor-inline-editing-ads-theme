@@ -29,9 +29,9 @@
                         <?php 
                              the_posts_pagination( array(
                                 'title'              => '', // this should hide the title
-                                'prev_text'          => __( 'Previous', 'twentyfifteen' ),
-                                'next_text'          => __( 'Next', 'twentyfifteen' ),
-                                'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( '', 'nieuwedruk' ) . ' </span>',
+                                'prev_text'          => __( 'Previous', 'free-theme-ads' ),
+                                'next_text'          => __( 'Next', 'free-theme-ads' ),
+                                'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( '', 'free-theme-ads' ) . ' </span>',
                             ) );
                         
                         ?>

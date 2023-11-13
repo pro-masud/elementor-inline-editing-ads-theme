@@ -30,11 +30,11 @@
                                 <div class="article-category mb-4 d-block">
                                     <?php echo get_the_tag_list('<ul><li class="d-inline-block mx-1 text-dark badge bg-primary-soft">', '</li><li class="d-inline-block mx-1 text-dark badge bg-primary-soft">', '<li></ul>');?>
                                 </div>
-                                <a href="<?php esc_attr(the_permalink(), 'freethemeads'); ?>">
-                                    <h2 class="limit-2-line-text"><?php esc_html(the_title(), 'freethemeads'); ?></h2>
+                                <a href="<?php esc_attr(the_permalink(), 'free-theme-ads'); ?>">
+                                    <h2 class="limit-2-line-text"><?php esc_html(the_title(), 'free-theme-ads'); ?></h2>
                                 </a>
 
-                                <p class="limit-2-line-text"><?php echo esc_html( the_content(), 'freethemeads'); ?></p>
+                                <p class="limit-2-line-text"><?php echo esc_html( the_content(), 'free-theme-ads'); ?></p>
                                 <?php wp_link_pages(); ?>
                                 
                                 <a href="#">
@@ -52,16 +52,16 @@
                                             ?>
                                         </div>
                                         <div class="avatar-info">
-                                            <h6 class="mb-0 avatar-name"><?php echo esc_html(the_author_posts_link(), 'freethemeads'); ?></h6>
-                                            <span class="small fw-medium text-meuted"><?php echo esc_html(get_the_date(), 'freethemeads'); ?></span>
+                                            <h6 class="mb-0 avatar-name"><?php echo esc_html(the_author_posts_link(), 'free-theme-ads'); ?></h6>
+                                            <span class="small fw-medium text-meuted"><?php echo esc_html(get_the_date(), 'free-theme-ads'); ?></span>
                                         </div>
                                     </div>
                                 </a>
                             </div>
                         </div>
                         <div class="single_next_prev_post" style="display: flex; justify-content: space-around;">
-                            <span style="text-align: left;"><?php previous_post_link('%link', '<i class="fa-solid fa-arrow-left"></i> Previous Post Link', 'freethemeads'); ?></span>
-                            <span style="text-align: right;"><?php next_post_link('%link', 'Next Post Link <i class="fa-solid fa-arrow-right"></i>', 'freethemeads'); ?></span>
+                            <span style="text-align: left;"><?php previous_post_link('%link', '<i class="fa-solid fa-arrow-left"></i> Previous Post Link', 'free-theme-ads'); ?></span>
+                            <span style="text-align: right;"><?php next_post_link('%link', 'Next Post Link <i class="fa-solid fa-arrow-right"></i>', 'free-theme-ads'); ?></span>
                         </div>
                     </div>
                     <?php } ?>

@@ -4,7 +4,7 @@
  * after setup theme
  * */ 
 function protheme_after_setup_theme(){
-    load_theme_textdomain('freethemeads');
+    load_theme_textdomain('free-theme-ads');
     
     // add theme supports post thumbnails
     add_theme_support("post-thumbnails");
@@ -24,9 +24,14 @@ function protheme_after_setup_theme(){
     
     // register nav menus header and footer
     register_nav_menus([
-        'main-menu' => __("Header Menu", "freethemeads"),
-        'footer-menu' => __("Footer Menu", "freethemeads"),
+        'main-menu' => __("Header Menu", "free-theme-ads"),
+        'footer-menu' => __("Footer Menu", "free-theme-ads"),
     ]);
+
+    // Set the default content width
+    if (!isset($content_width)) {
+        $content_width = 900;
+    }
 
     
 }
@@ -63,15 +68,31 @@ function protheme_enqueue_css_js(){
 add_action("wp_enqueue_scripts", "protheme_enqueue_css_js");
 
 
+// functions.php or your theme's functions file
+
+if (!function_exists('mytheme_enqueue_comments')) {
+    function mytheme_enqueue_comments() {
+        if (is_singular() && comments_open() && get_option('thread_comments')) {
+            // Enqueue comment-reply script
+            wp_enqueue_script('comment-reply');
+        }
+    }
+}
+
+// Hook into the 'wp_enqueue_scripts' action
+add_action('wp_enqueue_scripts', 'mytheme_enqueue_comments');
+
+
+
 
 /**
  * register widgets 
  * */ 
 function ads_widgets_register(){
     register_sidebar([
-        'name'              => __('Single Sidebar One', 'freethemeads'),
+        'name'              => __('Single Sidebar One', 'free-theme-ads'),
         'id'                => 'sidebar_1',
-        'description'       =>  __('Sidebar One', 'freethemeads'),
+        'description'       =>  __('Sidebar One', 'free-theme-ads'),
         'widget_before'     => "<div class='widgets'>",
         'widget_after'      => '</div>',
         'before_title'      => '<h2>',

@@ -1,5 +1,5 @@
 <!-- page header section start -->
-<section class="page-header position-relative overflow-hidden ptb-120 bg-dark" style="background: url('./images/page-header-bg.svg') no-repeat bottom left;">
+<section class="page-header position-relative overflow-hidden ptb-120 bg-dark" style="background: url() no-repeat bottom left;">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-12">
